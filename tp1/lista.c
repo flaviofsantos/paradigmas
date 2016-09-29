@@ -1,6 +1,12 @@
 /*  A entrada do seu programa é a lista de TODOS os nomes das clientes, enviada pela empresa. 
  *  A saída é a lista em HTML, em ordem alfabética, só com os nomes que iniciam com "R". */
 
+/* Este programa utiliza 3 argumentos:
+ * 1. Nome do arquivo que contem a lista de clientes
+ * 2. Nome do arquivo html a ser criado com a lista de ganhadores
+ * 3. Letra que servira de filtro para escolher os ganhadores */
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -9,6 +15,7 @@
 #define MAXLEN 200      // tamanho maximo da linha
 #define MAXLINES 1000   // quantidade maxima de linhas
 
+/* função de comparação para o qsort */
 int cmp(const void* a, const void* b);
 
 int main(int argc, char **argv)
